@@ -1,0 +1,24 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            terraformRoot:
+              - 'terraform/**'
+            terraformSubs:
+              - 'terraform/**'
+
+        # run only if some file in 'src' folder was changed
+      - name: echo
+        run: |
+          echo ${{ changes.changes.outputs }}
