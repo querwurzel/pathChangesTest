@@ -23,5 +23,5 @@ jobs:
       - name: echo
         run: |
           echo ${{ steps.changes.outputs.changes }}
-          echo ${{ steps.changes.outputs.terraformRoot }}
-          echo ${{ steps.changes.outputs.terraformSubs }}
+          echo ${{ steps.changes.outputs.terraformRoot_files }}
+          echo ${{ steps.changes.outputs.terraformSubs_files }}
