@@ -15,9 +15,9 @@ jobs:
           list-files: 'json'
           filters: |
             terraformRoot:
-              - 'terraform/*'
+              - 'terraform'
             terraformSubs:
-              - 'terraform/*/**'
+              - 'terraform/*/'
 
         # run only if some file in 'src' folder was changed
       - name: echo
