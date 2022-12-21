@@ -25,3 +25,13 @@ jobs:
           echo ${{ steps.changes.outputs.changes }}
           echo ${{ steps.changes.outputs.terraformRoot_files }}
           echo ${{ steps.changes.outputs.terraformSubs_files }}
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          dir_names: "true"
+
+      - name: echo
+        run: |
+          echo ${{ steps.changed-files.outputs.all_changed_files }}
