@@ -21,4 +21,5 @@ jobs:
         # run only if some file in 'src' folder was changed
       - name: echo
         run: |
-          echo ${{ steps.changes.outputs }}
+          echo ${{ steps.changes.outputs.terraformRoot }}
+          echo ${{ steps.changes.outputs.terraformSubs }}
