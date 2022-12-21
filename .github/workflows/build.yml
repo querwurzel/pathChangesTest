@@ -21,4 +21,4 @@ jobs:
         # run only if some file in 'src' folder was changed
       - name: echo
         run: |
-          echo ${{ changes.changes.outputs }}
+          echo ${{ steps.changes.outputs }}
