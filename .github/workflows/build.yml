@@ -16,7 +16,7 @@ jobs:
             terraformRoot:
               - 'terraform/**'
             terraformSubs:
-              - 'terraform/**'
+              - 'terraform/*/**'
 
         # run only if some file in 'src' folder was changed
       - name: echo
